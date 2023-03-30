@@ -25,8 +25,8 @@ void loop() {
 
 void readSD() {
   File dataFile = SD.read("token.txt");
-  if (dataFile) {                                     // если файл доступен для записи
-    dataFile.println(dataString);                     // сохраняю данные
+  if (dataFile) {                                     // если файл доступен для чтенния
+    Serial.println(dataString);
     dataFile.close();                                 // закрываю файл
     Serial.println("Read OK");                        // вывожу сообщение об удачной записи
   } else {                                            // если файл не доступен
